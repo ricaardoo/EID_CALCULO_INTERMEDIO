@@ -4,14 +4,14 @@
 
 - Curso: MAT1188 - Calculo Intermedio
 - Grupo: G05
-- Integrantes: [completar]
-- Tema: [completar]
-- Pregunta central: [completar]
+- Integrantes: Gustavo Valenzuela y Ricardo Aravena
+- Tema: Acumulación a partir de una tasa variable.
+- Pregunta central: ¿Cómo una tasa que cambia con el tiempo produce una cantidad acumulada?
 
 ## Requisitos
 
-- Python: [completar version]
-- Manim Community: [completar version]
+- Python: 3.13.7
+- Manim Community:  v0.22.0
 
 ## Instalacion
 
@@ -36,13 +36,16 @@ Reemplazar los nombres por los archivos y escenas reales.
 
 ## Estructura
 
-```text
-src/          Codigo de las escenas Manim
-assets/       Recursos utilizados por las escenas
-docs/         Guion, ficha y notas matematicas
-requirements.txt
-README.md
-```
+├── src/
+│   ├── config_comun.py       # Colores, la función r(t) y ejes base para que el video se vea uniforme
+│   ├── escena_1_2.py         # Persona A: Presentación, contexto de tasa y partición inicial (n=4)
+│   └── escena_3_4.py         # Persona B: Refinamiento (n=8, 16, 32), límite, integral y cierre
+├── docs/
+│   ├── guion_y_notas.md      # Guion cronometrado (4 a 6 min) + desarrollo matemático del ejemplo
+│   └── ficha_EID.pdf         # El documento final para subir a Blackboard
+├── assets/                   # Audios de sus voces (.mp3/.wav) o imágenes de apoyo
+├── requirements.txt
+└── README.md
 
 ## Fuentes
 
