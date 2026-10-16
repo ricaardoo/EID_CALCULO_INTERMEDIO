@@ -95,3 +95,51 @@ class SumaRiemannTasa(Scene):
         # Tiempo para explicar el ancho, la altura y el area de cada rectangulo.
         self.wait(105)
 
+class AcumulacionTotal(Scene):
+    def construct(self):
+        title = Text("De los aportes a la cantidad acumulada", font_size=31).to_edge(UP)
+        terms = Text(
+            "r(0.5) Delta t + r(1.5) Delta t + r(2.5) Delta t + r(3.5) Delta t",
+            font_size=24,
+        )
+        calculation = Text("= 2.5 + 3.5 + 4.5 + 5.5 = 16 MB", font_size=34)
+        integral = Text(
+            "integral de 0 a 4 de (2+t) dt = [2t + t^2/2]_0^4 = 16 MB",
+            font_size=26,
+        )
+        conclusion = Text(
+            "La integral suma una tasa por pequeños intervalos de tiempo.",
+            font_size=25,
+            color=GREEN,
+        )
+        answer = Text(
+            "Respuesta: la acumulacion total es la integral de la tasa.",
+            font_size=24,
+        )
+
+        terms.next_to(title, DOWN, buff=0.9)
+        calculation.next_to(terms, DOWN, buff=0.65)
+        integral.next_to(calculation, DOWN, buff=0.8)
+        conclusion.next_to(integral, DOWN, buff=0.8)
+        answer.next_to(conclusion, DOWN, buff=0.4)
+
+        self.play(Write(title))
+        self.play(Write(terms))
+        self.play(Write(calculation))
+        self.play(Write(integral))
+        self.play(FadeIn(conclusion), FadeIn(answer))
+        # Pausa para explicar la integral y relacionarla con la suma anterior.
+        self.wait(106)
+
+class Creditos(Scene):
+    def construct(self):
+        lines = VGroup(
+            Text("Fuentes", font_size=34),
+            Text("Stewart, Calculo de una variable, 2012", font_size=24),
+            Text("Thomas, Weir y Hass, Calculo: una variable, 2010", font_size=24),
+            Text("Apunte base: Introduccion a la integral, MAT1188, 2026", font_size=24),
+            Text("Manim Community Documentation, 0.19.x", font_size=24),
+        )
+        lines.arrange(DOWN, buff=0.35)
+        self.play(FadeIn(lines))
+        self.wait(21)
