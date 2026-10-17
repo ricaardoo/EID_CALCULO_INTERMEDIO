@@ -157,7 +157,7 @@ class AcumulacionTotal(Scene):
         self.play(Write(integral))
         self.play(FadeIn(conclusion), FadeIn(answer))
         # Pausa para explicar la integral y relacionarla con la suma anterior.
-        self.wait(106)
+        self.wait(175)
 
 
 class Creditos(Scene):
@@ -171,7 +171,7 @@ class Creditos(Scene):
         )
         lines.arrange(DOWN, buff=0.35)
         self.play(FadeIn(lines))
-        self.wait(21)
+        self.wait(14)
 
 
 class VideoCompleto(Scene):
