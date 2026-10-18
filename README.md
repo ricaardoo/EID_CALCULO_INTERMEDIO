@@ -110,4 +110,4 @@ La narración del video fue escrita y grabada por los integrantes con sus propia
 
 ## Versión entregada
 
-- Commit final (SHA): []
+- Commit final (SHA): `9345c419a2d5b3bebd23d933464033466266b8a`
