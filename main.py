@@ -16,12 +16,8 @@ from manim import (
     Write,
 )
 
-# Requiere LaTeX instalado (MiKTeX o TeX Live) para MathTex y Tex.
-
-
 def rate(t):
     return 2 + t
-
 
 START = 0
 END = 4
@@ -34,7 +30,6 @@ def fit(mob, max_width=12.5):
     if mob.width > max_width:
         mob.scale_to_fit_width(max_width)
     return mob
-
 
 class IntroduccionTasa(Scene):
     def construct(self):
